@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Dounde - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(0,0,0,0.5);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0.5rem 1rem;
+      font-weight: bold;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    nav a:hover {
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      color: white;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      transform: perspective(1000px) translateZ(0);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    section:hover {
+      transform: perspective(1000px) translateZ(20px) rotateX(3deg) rotateY(3deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    }
+
+    .skill-card img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.3);
+      margin-top: 3rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rahul Dounde</h1>
+    <p>Passionate Developer | Web & Mobile Applications</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello, I’m <b>Rahul Dounde</b>.<br><br>
+      I’m a passionate and detail-oriented developer with experience in building web and mobile applications. 
+      I love creating clean and efficient solutions, and continuously learning to stay ahead in the evolving tech world. 
+      I specialize in user-friendly interfaces, scalable code, and real-world problem solving.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+        <p>HTML5</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+        <p>CSS3</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
+        <p>React</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
+        <p>Node.js</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+        <p>Python</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>
+      - Portfolio Website (HTML/CSS/JS)<br>
+      - Task Manager App (React/Node.js)<br>
+      - AI Chatbot (Python/Flask)<br>
+      - E-commerce Site (Django/Stripe)<br>
+      - Data Dashboard (Tableau + Python)
+    </p>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>
+      <a href="resume.pdf" style="color: #0ff; text-decoration: underline;">Download Resume (PDF)</a>
+    </p>
+    <p>
+      <b>Experience:</b><br>
+      - Web Developer at XYZ (2023 - Present)<br>
+      - Intern at ABC Tech (2022)<br><br>
+      <b>Education:</b><br>
+      - B.Tech in Computer Science, University Name
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rahul Dounde. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
