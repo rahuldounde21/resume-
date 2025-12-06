@@ -1,220 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul Dounde - Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Rahul Dounde — Resume</title>
+<style>
+  :root{
+    --accent:#0b5ed7;
+    --accent-strong:#074bb0;
+    --bg:linear-gradient(180deg,#eaf6fb 0%,#f7fbfc 60%);
+    --card:#fff;
+    --muted:#596575;
+    --text:#0f1724;
+    --radius:14px;
+    --maxw:1100px;
+  }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Roboto,Arial,sans-serif}
+  body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;padding:28px}
 
-    header {
-      background: rgba(0,0,0,0.5);
-      padding: 2rem;
-      text-align: center;
-    }
+  .wrap{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:20px}
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+  /* header / top buttons */
+  .header{
+    background:var(--card);border-radius:var(--radius);padding:18px 20px;
+    box-shadow:0 12px 30px rgba(10,20,40,0.06);display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{font-weight:900;font-size:20px}
+  .nav{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    padding:10px 14px;border-radius:12px;border:0;background:linear-gradient(180deg,#fff,#f6f9ff);
+    font-weight:800;color:var(--accent-strong);cursor:pointer;box-shadow:0 8px 22px rgba(11,94,215,0.08);
+    transition:transform .14s, box-shadow .14s;
+  }
+  .btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(11,94,215,0.12)}
+  .btn.active{background:linear-gradient(180deg,var(--accent),var(--accent-strong));color:white;box-shadow:0 20px 44px rgba(11,94,215,0.22)}
 
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
+  /* main content card */
+  .card{
+    background:var(--card);border-radius:var(--radius);padding:28px;
+    box-shadow:0 14px 40px rgba(12,30,60,0.06);min-height:420px;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
+  /* panels */
+  .panel{display:none;opacity:0;transform:translateY(8px);transition:opacity .32s, transform .32s}
+  .panel.active{display:block;opacity:1;transform:translateY(0)}
+  h1{font-size:28px;color:var(--accent-strong);margin-bottom:8px}
+  .lead{color:var(--muted);font-size:15px;margin-bottom:12px}
+  .section-title{color:var(--accent);font-weight:900;margin-top:16px;margin-bottom:8px}
+  a.inline{color:var(--accent-strong);text-decoration:none;font-weight:800}
+  .projects-list{display:flex;flex-direction:column;gap:12px}
+  .project-item p{color:var(--muted);margin:4px 0 0}
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin: 0.5rem 1rem;
-      font-weight: bold;
-      padding: 0.6rem 1.2rem;
-      border: 2px solid white;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    }
+  /* skills */
+  .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
+  .skill-pill{background:linear-gradient(180deg,#f6fbff,#fff);padding:8px;border-radius:10px;border:1px solid rgba(10,30,60,0.04);font-weight:800;color:var(--muted);text-align:center}
 
-    nav a:hover {
-      background: linear-gradient(145deg, #00c6ff, #0072ff);
-      color: white;
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.6);
-    }
+  /* contact block bottom */
+  .contact-block{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+  .contact-block a{color:var(--accent-strong);font-weight:800;text-decoration:none}
+  .print-btn{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(180deg,var(--accent),var(--accent-strong));color:#fff;font-weight:900;cursor:pointer}
 
-    section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-      transform: perspective(1000px) translateZ(0);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
+  /* footer small */
+  .footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
 
-    section:hover {
-      transform: perspective(1000px) translateZ(20px) rotateX(3deg) rotateY(3deg);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      color: #ddd;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .skill-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .skill-card:hover {
-      transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-    }
-
-    .skill-card img {
-      width: 60px;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0,0,0,0.3);
-      margin-top: 3rem;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
+  /* responsive */
+  @media(max-width:760px){
+    .skills-grid{grid-template-columns:1fr}
+    .nav{justify-content:center}
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Rahul Dounde</h1>
-    <p>Passionate Developer | Web & Mobile Applications</p>
+<div class="wrap">
+  <header class="header">
+    <div class="brand">Rahul Dounde — Resume</div>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="btn active" data-panel="about">About</button>
+      <button class="btn" data-panel="projects">Projects</button>
+      <button class="btn" data-panel="skills">Skills</button>
+      <button class="btn" data-panel="contact">Contact</button>
+      <button class="btn" data-panel="download">Download</button>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-  </nav>
+  <main class="card" id="mainCard">
+    <!-- ABOUT -->
+    <section id="about" class="panel active" aria-live="polite">
+      <h1>About Me</h1>
+      <p class="lead"><strong>Rahul Dounde</strong> — 3rd-year B.Tech (CSE). I build responsive web applications using modern stacks (React/Next.js, Node.js). I create vlogs and experiment with AI/ML for small projects.</p>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello, I’m <b>Rahul Dounde</b>.<br><br>
-      I’m a passionate and detail-oriented developer with experience in building web and mobile applications. 
-      I love creating clean and efficient solutions, and continuously learning to stay ahead in the evolving tech world. 
-      I specialize in user-friendly interfaces, scalable code, and real-world problem solving.
-    </p>
-  </section>
+      <div class="section-title">Education</div>
+      <p class="lead"><strong>B.Tech — Computer Science</strong><br/>Pimpri Chinchwad University (2023–2027)</p>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
-        <p>HTML5</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
-        <p>CSS3</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
-        <p>React</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
-        <p>Node.js</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
-        <p>Python</p>
-      </div>
-    </div>
-  </section>
+      <div class="section-title">Interests</div>
+      <p class="lead">Web development • Machine Learning experiments • Vlogging • Video editing</p>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>
-      - Portfolio Website (HTML/CSS/JS)<br>
-      - Task Manager App (React/Node.js)<br>
-      - AI Chatbot (Python/Flask)<br>
-      - E-commerce Site (Django/Stripe)<br>
-      - Data Dashboard (Tableau + Python)
-    </p>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="panel" aria-hidden="true">
+      <h1>Projects</h1>
+      <div class="section-title">Selected GitHub Projects</div>
+      <div class="projects-list">
+        <div class="project-item">
+          <a class="inline" href="https://github.com/rahuldounde21/social-media-dashboard" target="_blank">social-media-dashboard</a>
+          <p>Dashboard UI showing social metrics (HTML/CSS/JS)</p>
+        </div>
 
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>
-      <a href="resume.pdf" style="color: #0ff; text-decoration: underline;">Download Resume (PDF)</a>
-    </p>
-    <p>
-      <b>Experience:</b><br>
-      - Web Developer at XYZ (2023 - Present)<br>
-      - Intern at ABC Tech (2022)<br><br>
-      <b>Education:</b><br>
-      - B.Tech in Computer Science, University Name
-    </p>
-  </section>
+        <div class="project-item">
+          <a class="inline" href="https://github.com/rahuldounde21/Nex-T1-Research" target="_blank">Nex-T1-Research</a>
+          <p>Research code and experiments (Python)</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Rahul Dounde. All rights reserved.</p>
-  </footer>
+        <div class="project-item">
+          <a class="inline" href="https://github.com/rahuldounde21/Django-Meta-Assessment-" target="_blank">Django-Meta-Assessment-</a>
+          <p>Django-based assessment & utilities</p>
+        </div>
+
+        <div class="project-item">
+          <a class="inline" href="https://github.com/rahuldounde21/DO101-apps" target="_blank">DO101-apps</a>
+          <p>Collection of small example applications</p>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:12px">Want different repos highlighted? Tell me which and I’ll update this section with short descriptions.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="panel" aria-hidden="true">
+      <h1>Skills</h1>
+
+      <div class="section-title">Core</div>
+      <div class="skills-grid" aria-hidden="false">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">JavaScript</div>
+        <div class="skill-pill">React / Next.js</div>
+        <div class="skill-pill">Node.js • Express</div>
+        <div class="skill-pill">MongoDB / MySQL</div>
+        <div class="skill-pill">Git & GitHub</div>
+        <div class="skill-pill">Python</div>
+        <div class="skill-pill">AI / Machine Learning</div>
+        <div class="skill-pill">Data Structures & Algorithms</div>
+      </div>
+
+      <div class="section-title" style="margin-top:12px">Notes</div>
+      <p class="lead">I build full-stack apps, deploy them on Vercel/Netlify, and experiment with ML models for small prototypes.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel" aria-hidden="true">
+      <h1>Contact</h1>
+
+      <div class="contact-block">
+        <div><strong>GitHub:</strong> <a class="inline" href="https://github.com/rahuldounde21" target="_blank">github.com/rahuldounde21</a></div>
+        <div><strong>Email:</strong> <a class="inline" href="mailto:rahuldounde1@gmail.com">rahuldounde1@gmail.com</a></div>
+        <div><strong>Phone:</strong> +91-XXXXXXXXXX</div>
+        <div><strong>LinkedIn:</strong> Rahul Dounde</div>
+      </div>
+
+      <p class="lead" style="margin-top:12px">Open for internships, freelance work and collaboration on web/ML projects.</p>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="panel" aria-hidden="true">
+      <h1>Download</h1>
+      <p class="lead">Use the Print / Save as PDF option below to generate a printable resume.</p>
+      <button class="print-btn" onclick="window.print()" aria-label="Print or Save as PDF">Print / Save as PDF</button>
+      <p class="lead" style="margin-top:12px">If you want a ready PDF file uploaded, I can generate it and add it to your repo.</p>
+    </section>
+
+    <div class="footer">© 2025 Rahul Dounde</div>
+  </main>
+</div>
+
+<script>
+  // panel switching logic
+  const buttons = document.querySelectorAll('.btn');
+  const panels = document.querySelectorAll('.panel');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const target = btn.getAttribute('data-panel');
+      // toggle active button
+      buttons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      // show target panel
+      panels.forEach(p=>{
+        if(p.id === target){
+          p.classList.add('active');
+          p.setAttribute('aria-hidden','false');
+        } else {
+          p.classList.remove('active');
+          p.setAttribute('aria-hidden','true');
+        }
+      });
+    });
+  });
+
+  // keyboard navigation: left/right cycles panels
+  const order = ['about','projects','skills','contact','download'];
+  let current = 0;
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowRight'){ current = (current+1) % order.length; goTo(order[current]); }
+    if(e.key === 'ArrowLeft'){ current = (current-1 + order.length) % order.length; goTo(order[current]); }
+  });
+  function goTo(name){
+    const btn = [...buttons].find(b=>b.getAttribute('data-panel')===name);
+    if(btn) btn.click();
+  }
+  // ensure current follows initial active button
+  current = order.indexOf(document.querySelector('.btn.active').getAttribute('data-panel') || 'about');
+</script>
 
 </body>
 </html>
