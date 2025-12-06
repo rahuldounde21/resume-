@@ -1,51 +1,83 @@
-# resume-
-# 📄 My Resume Website
+🌐 Rahul Dounde — Resume Website
 
-Welcome to my resume project!  
-This repository contains the source code for my personal resume website, created to showcase my skills, education, and projects in a clean and responsive format.
+A clean, modern, and interactive resume website built using HTML, CSS, and JavaScript.
+This site showcases my education, projects, skills, and contact details in a smooth, button-based navigation system.
 
----
+🚀 Live Demo
 
-## 🚀 About the Project
+🔗 GitHub Pages Link:
+(Add your deployed link here)
+Example:
 
-This project is a simple and elegant **resume webpage** built using HTML, CSS (and JS if added).  
-It is designed to be lightweight, easy to update, and suitable for hosting on GitHub Pages.
+https://rahuldounde21.github.io/resume/
 
-👉 **Live Demo:** *(Add your deployed GitHub Pages link here)*  
-👉 Example: https://rahuldounde21.github.io/resume/
+📌 Features
 
----
+🎨 Clean modern UI
 
-## 🛠️ Technologies Used
+🔘 Interactive navigation buttons
 
-- **HTML5** – Structure of the webpage  
-- **CSS3** – Styling and layout  
-- **JavaScript (optional)** – For interactions like animations  
-- **GitHub Pages** – For hosting  
+📱 Fully responsive design
 
----
+🧭 Smooth section switching (About / Projects / Skills / Contact / Download)
 
-## 📌 Features
+🖨️ One-click Print / Save as PDF
 
-- Clean and responsive design  
-- Easy to read layout  
-- Sections for:
-  - About Me  
-  - Skills  
-  - Education  
-  - Projects  
-  - Contact Details  
-- Fast loading & mobile-friendly  
+⚡ Fast and lightweight — no frameworks needed
 
----
+🛠️ Tech Stack
 
-## 📚 How to Run the Project
+HTML5
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/rahuldounde21/resume-.git
-<img width="911" height="369" alt="Screenshot 2025-12-06 161023" src="https://github.com/user-attachments/assets/0673bf37-c53b-4e47-95d7-724c2e7a415e" />
-<img width="901" height="347" alt="Screenshot 2025-12-06 160919" src="https://github.com/user-attachments/assets/e627d708-208e-404a-ade0-429dd33ac4ab" />
-<img width="919" height="568" alt="Screenshot 2025-12-06 160909" src="https://github.com/user-attachments/assets/f6bd5f3c-53b0-442a-a103-5cb37072fd38" />
-<img width="912" height="732" alt="Screenshot 2025-12-06 160900" src="https://github.com/user-attachments/assets/74310c30-d733-4188-ad11-5777804131e1" />
+CSS3 (Custom styling, gradients, shadows)
 
+JavaScript (Panel switching + keyboard nav)
+
+GitHub Pages (Hosting)
+
+📂 Sections
+About Me
+
+Short intro, education details, interests.
+
+Projects
+
+Direct links to selected GitHub repos:
+
+Social Media Dashboard
+
+Nex-T1 Research
+
+Django Meta Assessment
+
+DO101 Apps
+
+Skills
+
+Frontend: HTML, CSS, JS, React, Next.js
+
+Backend: Node.js, Express, MongoDB, MySQL
+
+AI / ML: Python, NumPy, Pandas, TensorFlow/PyTorch (basics)
+
+Tools: Git, GitHub, Deployment
+
+Others: DSA fundamentals
+
+Contact
+
+GitHub
+
+Email
+
+Phone
+
+LinkedIn
+
+Download
+
+Print/Save PDF version of the resume.<img width="1539" height="721" alt="Screenshot 2025-12-06 170042" src="https://github.com/user-attachments/assets/55a443e3-b2b1-4b0e-9a5a-eb4be8d22968" />
+<img width="1539" height="710" alt="Screenshot 2025-12-06 170034" src="https://github.com/user-attachments/assets/747db70f-ff4a-49ae-a455-96ff332e3913" />
+<img width="1444" height="749" alt="Screenshot 2025-12-06 165848" src="https://github.com/user-attachments/assets/594d0c2d-1278-4c74-9bef-79b8e503b9c5" />
+<img width="1434" height="685" alt="Screenshot 2025-12-06 165829" src="https://github.com/user-attachments/assets/949315ad-fd0a-481d-8d10-fcdbe8dfefd5" />
+<img width="1455" height="638" alt="Screenshot 2025-12-06 165821" src="https://github.com/user-attachments/assets/1af44a5d-0ea1-4717-84a6-38ed5afe53a7" />
